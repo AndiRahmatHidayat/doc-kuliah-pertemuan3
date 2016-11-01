@@ -1,0 +1,32 @@
+Latar Belakang
+Sekarang banyak lembaga-lembaga  maupun situs tetentu yang menyediakan data shapefile seperti Shapefile ESRI untuk 
+dapat mellihat file tesebut kita harus menggunakan software Seperti QGIS python,adapun shapefile itu sendiri 
+memilik file seperti contohnya shp,shx,dbf.Pembacaan Shapefile pada python dapat dipanggil langsung dile shp
+tersebut selain itu kita juga bisa membuat class terlebih dahulu,dan akan dijelaskan pada video dibawah.
+
+Pembahasan
+Retrieve data geospasial adalah melakukan select/view data record dari file shapefile. dengan Cara mengimport file dan
+membaca file tersebut.
+
+SHP adalah data yang ada didalam shapefile dan menyimpan data geometri .dan ada pula data pada   file SPH sebagai berikut :
+   •	Bbox adalah boundary box atau koordinat batas view pada suatu peta.
+   •	Point adalah titik kordinat.Nantinya akan menampung (x,y).
+   •	Shapetype adalah dijelaskan dalam jenis data geometri yang mempunyai standar nomor yang sudah ditetapkan oleh ESRI yang 
+      berupa angka seperti nomor 1 untuk poin,2 untuk polygon, 3 untukpolyline ,dan sebagainya.
+
+   Membaca data geometri pada python:
+       >> import shapefile
+       >> sf = shapefile.Reader(“namafile.shp”)
+       >> sf.shapes()
+       >>a = sf.shapes()
+       >>len(a)
+
+DBF adalah file yang menyimpan file tabular dan menyimpan data atribut.
+     Membaca data dbf :
+       >> import shapefile
+       >> sf.records()
+       >> sf.records(n)
+
+Kesimpulan
+Data shp dapat kita lihat dengan menggunakan software yang sudah disediakan atau alat tertentu dan tanpa alat atau software
+yang sudah ditentukan kita tidak dapat melihat data tersebut .
